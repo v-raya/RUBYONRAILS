@@ -6,7 +6,7 @@ node ('cals-slave'){
 			git branch: 'master',  credentialsId: '433ac100-b3c2-4519-b4d6-207c029a103b', url: 'git@github.com:ca-cwds/rubyonrails.git'
 		}
 		stage ('Build Docker'){
-			sh '''cd rubyonrails/ruby/ruby251
+			sh '''cd ruby/ruby251
 			docker build -t cwds/ruby -t cwds/ruby:251 -t cwds/ruby:${BUILD_NUMBER} . '''
 			withDockerRegistry([credentialsId: '6ba8d05c-ca13-4818-8329-15d41a089ec0']) {
 				sh 'docker push cwds/ruby'
