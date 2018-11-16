@@ -1,9 +1,9 @@
-# version 0.7
+# version 11
 
 # versions at time of creation
-# node : 8.11.3
-# yarn : 1.7.0
-# puma : 3.11.4
+# node : 8.12
+# yarn : 1.12.3
+# puma : 3.12.0
 
 FROM ruby:2.5.1
 
